@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Guessing Game"/>
+        <attribute name="authors" value="MS32CRT"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-12-11 01:03:46 PM"/>
+        <attribute name="created" value="TVMzMkNSVDtBTVREMjA0LTIzOzIwMjUtMTItMTE7MDk6NDY6NDYgQU07MjM1Ng=="/>
+        <attribute name="edited" value="TVMzMkNSVDtBTVREMjA0LTIzOzIwMjUtMTItMTE7MDE6MDM6NDYgUE07MjsyNDY1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="InputNum, GuessNum, Attempts" type="Integer" array="False" size=""/>
+            <assign variable="GuessNum" expression="Random(50)"/>
+            <assign variable="Attempts" expression="0"/>
+            <do expression="InputNum != GuessNum AND Attempts &lt;= 4">
+                <output expression="&quot;Guess the number: &quot;" newline="True"/>
+                <input variable="InputNum"/>
+                <if expression="InputNum = GuessNum">
+                    <then/>
+                    <else>
+                        <if expression="InputNum &gt; GuessNum">
+                            <then>
+                                <output expression="&quot;Guess is too high, try again&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;Guess too low, try again&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <assign variable="Attempts" expression="Attempts + 1"/>
+            </do>
+            <if expression="Attempts &gt;= 4">
+                <then>
+                    <output expression="&quot;You gotta do better than that&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;You got it, the number is: &quot; &amp; GuessNum" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

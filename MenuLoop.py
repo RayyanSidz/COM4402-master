@@ -1,0 +1,14 @@
+
+while True:
+    choice = int(input("1. Add, 2. Subtract, 0. Exit\n"))
+    if choice == 0:
+        break
+    else:
+        num1 = int(input("Enter first number: "))
+        num2 = int(input("Enter second number: "))
+        if choice == 1:
+            print(num1 + num2)
+        elif choice == 2:
+            print(num1 - num2)
+        else:
+            print("Invalid choice")

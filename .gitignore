@@ -1,0 +1,107 @@
+# -----------------------------
+# PyCharm / IntelliJ
+# -----------------------------
+.idea/
+*.iml
+# Uncomment if you want to ignore PyCharm-specific project settings
+# .idea/**/workspace.xml
+# .idea/**/tasks.xml
+# .idea/dictionaries
+# .idea/**/dataSources/
+# .idea/**/dataSources.ids
+# .idea/**/sqlDataSources.xml
+# .idea/**/dynamic.xml
+# .idea/**/usage.statistics.xml
+# .idea/**/shelf/
+
+# JetBrains caches
+.idea/**/libraries
+
+# -----------------------------
+# Python
+# -----------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+pip-wheel-metadata/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage*
+.cache
+pytest_cache/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# pytype
+.pytype/
+
+# pyright
+typings/
+
+# VSCode (if used alongside PyCharm)
+.vscode/
+
+# Local environment variables
+*.env
+*.env.*
+.envrc

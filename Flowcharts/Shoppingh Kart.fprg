@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Shoppingh Kart"/>
+        <attribute name="authors" value="MS32CRT"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-12-11 09:45:07 AM"/>
+        <attribute name="created" value="TVMzMkNSVDtBTVREMjA0LTIzOzIwMjUtMTItMDk7MDI6MTA6MDQgUE07MjM1Ng=="/>
+        <attribute name="edited" value="TVMzMkNSVDtBTVREMjA0LTIzOzIwMjUtMTItMTE7MDk6NDU6MDcgQU07NDsyNDYz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Total, CurrPrice, NewPrice" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the price&quot;" newline="True"/>
+            <input variable="CurrPrice"/>
+            <assign variable="Total" expression="0"/>
+            <while expression="CurrPrice != 0">
+                <assign variable="Total" expression="Total + CurrPrice"/>
+                <output expression="&quot;Total = &quot; &amp; Total" newline="True"/>
+                <output expression="&quot;Enter new price&quot;" newline="True"/>
+                <input variable="NewPrice"/>
+                <assign variable="CurrPrice" expression="NewPrice"/>
+            </while>
+            <if expression="Total &gt; 100">
+                <then>
+                    <declare name="Discount" type="Integer" array="False" size=""/>
+                    <assign variable="Discount" expression="(Total * 10) / 100"/>
+                    <assign variable="Total" expression="Total - Discount"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;Price to be paid = &quot; &amp; Total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

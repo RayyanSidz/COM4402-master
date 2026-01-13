@@ -1,0 +1,63 @@
+- Tea instructions
+
+Grab a mug
+Get some hot water
+Get some milk
+Get a tea bag
+Get a tea spoon
+Place the tea bag into the cup
+Pour hot water into the cup
+Pour a small amount of milk in it
+Add sugar to the tea spoon, then add it to the tea bag.
+
+
+- Pseudocode to add 2 numbers
+START
+    OUTPUT "Enter the Value of a"
+    INPUT a
+    OUTPUT "Enter the value of b"
+    INPUT b
+    OUTPUT "The sum is " a + b
+END
+
+-Pseudocode for Extended Pass / Fail
+START
+    INPUT score
+    IF score >= 70
+        OUTPUT "Distinction"
+    ELSE IF score < 70 AND score >= 40
+        OUTPUT "Pass"
+    ELSE
+        OUTPUT "Fail"
+END
+
+
+- Pseudocode Menu Outline
+START
+    OUTPUT "1 - Add item, 2 - Delete item, 3 - Exit"
+    INPUT Choice
+    IF Choice = 1
+        OUTPUT "Add item"
+    ELSE IF Choice = 2
+        OUTPUT "Delete item"
+    ELSE
+        OUTPUT "Exit Program"
+END
+
+
+- Pseudocode for Shopping Kart flowchart
+START
+    OUTPUT "Enter the price: "
+    INPUT CurrentPrice
+    Total = 0
+    WHILE CurrentPrice != 0
+        Total = Total + CurrentPrice
+        OUTPUT "Total = " Total
+        OUTPUT "Enter new price"
+        INPUT NewPrice
+        CurrentPrice = NewPrice
+    ENDWHILE
+    IF Total > 100
+        Discount = (Total * 10) / 100
+        Total = Total - Discount
+    OUTPUT "Price to be paid = " Total

@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Operation"/>
+        <attribute name="authors" value="MS32CRT"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-12-09 02:45:43 PM"/>
+        <attribute name="created" value="TVMzMkNSVDtBTVREMjA0LTIzOzIwMjUtMTItMDk7MDE6NTE6MTggUE07MjM2NQ=="/>
+        <attribute name="edited" value="TVMzMkNSVDtBTVREMjA0LTIzOzIwMjUtMTItMDk7MDI6NDU6NDMgUE07MzsyNDc3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="operation" type="String" array="False" size=""/>
+            <declare name="numA, numB, Result" type="Integer" array="False" size=""/>
+            <output expression="&quot;Choose operator +, -, x or /&quot;" newline="True"/>
+            <input variable="operation"/>
+            <if expression="operation == &quot;+&quot; or operation == &quot;-&quot; or operation == &quot;x&quot; or operation == &quot;/&quot;">
+                <then/>
+                <else>
+                    <output expression="&quot;Invalid operation&quot;" newline="True"/>
+                    <breakpoint expression="" always="True"/>
+                </else>
+            </if>
+            <output expression="&quot;Enter numA&quot;" newline="True"/>
+            <input variable="numA"/>
+            <output expression="&quot;Enter numB&quot;" newline="True"/>
+            <input variable="numB"/>
+            <if expression="operation = &quot;+&quot;">
+                <then>
+                    <assign variable="Result" expression="numA + numB"/>
+                </then>
+                <else>
+                    <if expression="operation = &quot;-&quot;">
+                        <then>
+                            <assign variable="Result" expression="numA - numB"/>
+                        </then>
+                        <else>
+                            <if expression="operation = &quot;x&quot;">
+                                <then>
+                                    <assign variable="Result" expression="numA * numB"/>
+                                </then>
+                                <else>
+                                    <if expression="operation = &quot;/&quot;">
+                                        <then>
+                                            <assign variable="Result" expression="numA / numB"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;The Result of your operation = &quot; &amp; Result" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

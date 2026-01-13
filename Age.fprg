@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Age"/>
+        <attribute name="authors" value="MS32CRT"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-12-09 01:47:54 PM"/>
+        <attribute name="created" value="TVMzMkNSVDtBTVREMjA0LTIzOzIwMjUtMTItMDk7MDE6NDI6MzUgUE07MjM2NA=="/>
+        <attribute name="edited" value="TVMzMkNSVDtBTVREMjA0LTIzOzIwMjUtMTItMDk7MDE6NDc6NTQgUE07MTsyNDc4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="age, nextAge" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter Age&quot;" newline="True"/>
+            <input variable="age"/>
+            <assign variable="nextAge" expression="age + 1"/>
+            <output expression="&quot;new age is &quot; &amp; nextAge" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

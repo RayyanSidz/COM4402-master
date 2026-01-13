@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Flowchart"/>
+        <attribute name="authors" value="MS32CRT"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-12-09 01:41:42 PM"/>
+        <attribute name="created" value="TVMzMkNSVDtBTVREMjA0LTIzOzIwMjUtMTItMDk7MDE6MTk6MzggUE07MjM3MQ=="/>
+        <attribute name="edited" value="TVMzMkNSVDtBTVREMjA0LTIzOzIwMjUtMTItMDk7MDE6NDE6NDIgUE07MTsyNDY5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numA, numB, sum" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please Enter numA&quot;" newline="True"/>
+            <input variable="numA"/>
+            <output expression="&quot;Please Enter numB&quot;" newline="True"/>
+            <input variable="numB"/>
+            <if expression="numA &gt; numB">
+                <then>
+                    <output expression="&quot;A is greater&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;B is greater&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
