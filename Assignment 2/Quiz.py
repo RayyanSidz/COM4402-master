@@ -37,22 +37,27 @@ quiz = [
 
 # Function to run the quiz
 def run_quiz():
-    #Randomly shuffle the questions
+    # Randomly shuffle the questions
     random.shuffle(quiz)
     score = 0
     for index in range(len(quiz)):
         print(f"{index + 1}) {quiz[index]['question']}")
-        answer = input(f"{quiz[index]['options']}")
+        print(quiz[index]['options'])
         try:
-            user_answer = int(answer)
+            user_answer = int(input("Choose your option: "))
         except ValueError:
-            user_answer = answer
+            print("Invalid type")
+            return
 
-        if 0 < user_answer > 5:
+        if 0 < user_answer < 5:
             if user_answer == quiz[index]['answer']:
                 score += 1
-        elif user_answer == quiz[index]['options'[quiz[index]['answer']]]:
-            score
+        else:
+            print("option doesn't exist")
+            break
+    print(f"You scored {score} / {len(quiz)}")
+
+
 
 
 
