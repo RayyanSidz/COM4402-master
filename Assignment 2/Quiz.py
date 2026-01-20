@@ -35,6 +35,10 @@ quiz = [
         }
         ]
 
+def show_score(score):
+    global quiz
+    print(f"You scored {score} / {len(quiz)}")
+
 # Function to run the quiz
 def run_quiz():
     # Randomly shuffle the questions
@@ -55,7 +59,22 @@ def run_quiz():
         else:
             print("option doesn't exist")
             break
-    print(f"You scored {score} / {len(quiz)}")
+    show_score(score)
+    play_again()
+
+def play_again():
+    run_quiz_again = input("Play again? Y/N: ")
+    if run_quiz_again.lower() == "y":
+        run_quiz()
+    else:
+        print("Goodbye!")
+
+
+run_quiz()
+
+
+
+
 
 
 
