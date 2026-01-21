@@ -49,11 +49,7 @@ quiz = [
         }
         ]
 
-# Function to show the candidate's score
-def show_score(score):
-    # to allow the quiz variable to be used inside the function
-    global quiz
-    print(f"You scored {score} / {len(quiz)}")
+
 
 # Function to run the quiz
 def run_quiz():
@@ -86,6 +82,13 @@ def run_quiz():
     # prompt the user with a choice to play again
     play_again()
 
+
+# Function to show the candidate's score
+def show_score(score):
+    # to allow the quiz variable to be used inside the function
+    global quiz
+    print(f"You scored {score} / {len(quiz)}")
+
 # Function to get the answer from the user
 def get_user_answer():
     # Use of error handling to accept only integer inputs
@@ -103,8 +106,12 @@ def play_again():
     # on the user's input
     if run_quiz_again.lower() == "y":
         run_quiz()
-    else:
+    elif run_quiz_again.lower() == "n":
         print("Goodbye!")
+    else:
+        print("just y or n are accepted")
+        play_again()
+        return
 
 run_quiz()
 
