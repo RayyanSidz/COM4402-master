@@ -23,7 +23,7 @@ quiz = [
         },
         {
             # Question 4:
-            "question": "Which of one these Companies is German?",
+            "question": "Which one of these Companies is German?",
             "options": ["1) Siemens", "2) Gymshark", "3) Meta", "4) Ubisoft"],
             "answer": 1
         },
@@ -46,6 +46,12 @@ quiz = [
             "options": ["1) Joseph Stalin", "2) King Canute", "3) Genghis Khan",
                         "4) Zeus"],
             "answer": 3
+        },
+        {
+            # Question 8:
+            "question": "Who discovered Alternating current?",
+            "options": ["1) Kanye West", "2) Mozart", "3) Thomas Edison", "4) Nikola Tesla"],
+            "answer": 4
         }
         ]
 
@@ -60,8 +66,9 @@ def run_quiz():
     # loop through each question in the quiz
     for index in range(len(quiz)):
         # display the question and the multiple choice options
-        print(f"{index + 1}) {quiz[index]['question']}")
-        print(quiz[index]['options'])
+        # print(f"{index + 1}) {quiz[index]['question']}")
+        # print(quiz[index]['options'])
+        display_question(index)
         user_answer = get_user_answer() # function defined in a later snippet of code
         # Only check the answer if it of the right datatype
         if user_answer != None:
@@ -113,9 +120,12 @@ def play_again():
         play_again()
         return
 
+def display_question(index):
+    print(f"{index + 1}) {quiz[index]['question']}")
+    options = quiz[index]['options']
+    for option in range(len(options)):
+        print(f"{options[option]} ({option + 1})")
 run_quiz()
-
-
 
 
 
