@@ -59,33 +59,36 @@ quiz = [
 
 # Function to run the quiz
 def run_quiz():
-    # Randomly shuffle the questions
-    random.shuffle(quiz)
-    score = 0
+    repeat_game = True
 
-    # loop through each question in the quiz
-    for index in range(len(quiz)):
-        # display the question and the multiple choice options
-        display_question(index)
-        user_answer = get_user_answer() # function defined in a later snippet of code
-        # Only check the answer if it of the right datatype
-        if user_answer != None:
-            # To ensure the choice is within the range of options available
-            if 0 < user_answer < 5:
-                if user_answer == quiz[index]['answer']:
-                    score += 1
+    while repeat_game == True:
+        # Randomly shuffle the questions
+        random.shuffle(quiz)
+        score = 0
+
+        # loop through each question in the quiz
+        for index in range(len(quiz)):
+            # display the question and the multiple choice options
+            display_question(index)
+            user_answer = get_user_answer() # function defined in a later snippet of code
+            # Only check the answer if it of the right datatype
+            if user_answer != None:
+                # To ensure the choice is within the range of options available
+                if 0 < user_answer < 5:
+                    if user_answer == quiz[index]['answer']:
+                        score += 1
+                else:
+                    print("option doesn't exist")
+                    break
             else:
-                print("option doesn't exist")
-                break
-        else:
-            # prompt the user with a choice to play again
-            play_again()
-            # End the function if the user clicks no
-            return
-    # Run the show score function to display the user's final score
-    show_score(score)
-    # prompt the user with a choice to play again
-    play_again()
+                # prompt the user with a choice to play again
+                repeat_game = play_again()
+                # End the function if the user clicks no
+                return
+        # Run the show score function to display the user's final score
+        show_score(score)
+        # prompt the user with a choice to play again
+        repeat_game = play_again()
 
 
 # Function to show the candidate's score
@@ -110,9 +113,10 @@ def play_again():
     # Use of a conditional to either run or end the function based
     # on the user's input
     if run_quiz_again.lower() == "y":
-        run_quiz()
+        return True
     elif run_quiz_again.lower() == "n":
         print("Goodbye!")
+        return False
     else:
         print("just y or n are accepted")
         play_again()
