@@ -66,8 +66,6 @@ def run_quiz():
     # loop through each question in the quiz
     for index in range(len(quiz)):
         # display the question and the multiple choice options
-        # print(f"{index + 1}) {quiz[index]['question']}")
-        # print(quiz[index]['options'])
         display_question(index)
         user_answer = get_user_answer() # function defined in a later snippet of code
         # Only check the answer if it of the right datatype
@@ -120,8 +118,11 @@ def play_again():
         play_again()
         return
 
+# Function to display the questions and its options
 def display_question(index):
+    # Display the question
     print(f"{index + 1}) {quiz[index]['question']}")
+    # Loop through the options to display them on separate lines
     options = quiz[index]['options']
     for option in range(len(options)):
         print(f"{options[option]} ({option + 1})")
